@@ -1,0 +1,30 @@
+{
+    "name": "kagex-vscode",
+    "displayName": "KAG/KAGEX",
+    "description": "Adding KAG/KAGEX language support for Visual Studio Code",
+    "version": "0.0.1",
+    "publisher": "Biscrat",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sakano/kagex-vscode.git"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "kagex",
+            "aliases": ["kagex", "kag"],
+            "extensions": [".ks"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "kagex",
+            "scopeName": "source.kagex",
+            "path": "./syntaxes/kagex.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "kagex",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#label" },
+    { "include": "#name" },
+    { "include": "#iscript" },
+    { "include": "#tag" }
+  ],
+  "repository": {
+    "comment": {"patterns": [
+        {
+            "begin": "^\\t*;",
+            "end": "\\n",
+            "name": "comment.line.semicoron.kagex"
+        }
+      ]
+    },
+    "label": {"patterns": [
+        {
+            "begin": "^\\t*\\*",
+            "end": "\\n",
+            "name": "entity.name.tag.kagex"
+        }
+    ]
+    },
+    "iscript": {
+      "patterns": [
+        {
+          "begin": "(?<!\\[)\\[iscript\\]|^\\t*@iscript",
+          "end": "\\[endscript\\]|^\\t*@endscript",
+          "beginCaptures": {
+              "0": { "name": "keyword.control.kagex" }
+          },
+          "endCaptures": {
+              "0": { "name": "keyword.control.kagex" }
+          },
+          "patterns": [
+              { "include": "source.tjs" }
+          ]
+        }
+      ]
+    },
+    "name": {
+      "patterns": [
+        {
+            "begin": "^\\t*【",
+            "end": "】",
+            "name": "keyword.other.kagex"
+        }
+      ]
+    },
+    "tag": {
+      "patterns": [
+        {
+            "begin": "(?<!\\[)\\[\\s*\\w+",
+            "end": "\\]",
+            "name": "meta.tag.kagex",
+            "beginCaptures": {
+                "0": { "name": "entity.name.type.kagex" }
+            },
+            "endCaptures": {
+                "0": { "name": "entity.name.type.kagex" }
+            },
+            "patterns": [
+                { "include": "#attribute" }
+            ]
+        },
+        {
+            "begin": "^\\t*@\\s*\\w+",
+            "end": "(?<!\\\\)\\n",
+            "name": "meta.tag.commandline.kagex",
+            "beginCaptures": {
+                "0": { "name": "entity.name.type.kagex" }
+            },
+            "patterns": [
+                { "include": "#attribute" }
+            ]
+        }
+      ]
+    },
+    "attribute": {
+      "patterns": [
+        {
+            "match": "(\\w+)(\\s*=\\s*(&?%?(\".*?\"|'.*?'|[^\\s\\]=]+)))?",
+            "captures": {
+                "1": { "name": "entity.name.function.kagex" },
+                "3": { "name": "constant.other.kagex" }
+            }
+        }
+      ]
+    }
+  },
+  "scopeName": "source.kagex"
+}
