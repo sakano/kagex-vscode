@@ -18,20 +18,29 @@
     "categories": [
         "Languages"
     ],
-    "keywords":[
+    "keywords": [
         "kirikiri"
     ],
     "contributes": {
-        "languages": [{
-            "id": "kagex",
-            "aliases": ["kagex", "kag"],
-            "extensions": [".ks"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "kagex",
-            "scopeName": "source.kagex",
-            "path": "./syntaxes/kagex.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "kagex",
+                "aliases": [
+                    "kagex",
+                    "kag"
+                ],
+                "extensions": [
+                    ".ks"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "kagex",
+                "scopeName": "source.kagex",
+                "path": "./syntaxes/kagex.tmLanguage.json"
+            }
+        ]
     }
 }
