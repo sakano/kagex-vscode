@@ -1,0 +1,86 @@
+{
+  "emb": {
+    "prefix": "[emb exp=",
+    "body": [
+      "[emb exp=\"$0\""
+    ]
+  },
+  "emb@": {
+    "prefix": "@emb exp=",
+    "body": [
+      "@emb exp=\"$0\""
+    ]
+  },
+  "if": {
+    "prefix": "[if exp=",
+    "body": [
+      "[if exp=\"$1\"]",
+      "$0",
+      "[endif"
+    ],
+    "description": "if/endif"
+  },
+  "if@": {
+    "prefix": "@if exp=",
+    "body": [
+      "@if exp=\"$1\"",
+      "$0",
+      "@endif"
+    ],
+    "description": "if/endif"
+  },
+  "ignore": {
+    "prefix": "[ignore exp=",
+    "body": [
+      "[ignore exp=\"$1\"]",
+      "$0",
+      "[endignore"
+    ],
+    "description": "ignore/endignore"
+  },
+  "ignore@": {
+    "prefix": "@ignore exp=",
+    "body": [
+      "@ignore exp=\"$1\"",
+      "$0",
+      "@endignore"
+    ],
+    "description": "ignore/endignore"
+  },
+  "iscript": {
+    "prefix": "[iscript]",
+    "body": [
+      "[iscript]",
+      "$0",
+      "[endscript"
+    ],
+    "description": "iscript/endscript"
+  },
+  "iscript@": {
+    "prefix": "@iscript",
+    "body": [
+      "@iscript",
+      "$0",
+      "@endscript"
+    ],
+    "description": "iscript/endscript"
+  },
+  "macro": {
+    "prefix": "[macro name=",
+    "body": [
+      "[macro name=\"$1\"]",
+      "$0",
+      "[endmacro"
+    ],
+    "description": "macro/endmacro"
+  },
+  "macro@": {
+    "prefix": "@macro name=",
+    "body": [
+      "@macro name=\"$1\"",
+      "$0",
+      "@endmacro"
+    ],
+    "description": "macro/endmacro"
+  }
+}
