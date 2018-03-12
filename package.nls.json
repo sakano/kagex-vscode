@@ -1,0 +1,10 @@
+{
+  "kagex.description":"Adding KAG/KAGEX language support for Visual Studio Code",
+  "kagex.updateCtags.title": "Update Ctags Index File",
+  "kagex.configuration.title": "KAG/KAGEX Configuration",
+  "kagex.ctagsFilePath.description": "File name of the Ctags' index file",
+  "kagex.ctagsRootPath.description": "Root path to search ks files",
+  "kagex.ctagsFileExtensions.description": "File extesions to handle as ks file",
+  "kagex.ctagsExtraOption.description": "Command-line options which will be passed to ctags",
+  "kagex.ctagsRunOnSave.description": "Whether recreate index file automatically when ks file is saved"
+}
