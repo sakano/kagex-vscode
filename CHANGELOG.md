@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "kagex-vscode" extension will be documented in this file.
 
+## [1.0.0]
+- Support creation of ctags index file
+- Add Japanese translation
+
 ## [0.1.0]
 - Support snippets for some special tags
 - ";#region" and ";#endregion" can be used to specify folding section
