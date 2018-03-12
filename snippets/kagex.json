@@ -1,4 +1,11 @@
 {
+  "endregion": {
+    "prefix": ";#endregion",
+    "body": [
+      ";#endregion"
+    ],
+    "description": "#endregion"
+  },
   "emb": {
     "prefix": "[emb exp=",
     "body": [
@@ -82,5 +89,13 @@
       "@endmacro"
     ],
     "description": "macro/endmacro"
+  },
+  "region": {
+    "prefix": ";#region",
+    "body": [
+      ";#region$0",
+      ";#endregion"
+    ],
+    "description": "#region"
   }
 }
