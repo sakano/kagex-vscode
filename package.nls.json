@@ -1,6 +1,7 @@
 {
-  "kagex.description":"Adding KAG/KAGEX language support for Visual Studio Code",
+  "kagex.description": "Adding KAG/KAGEX language support for Visual Studio Code",
   "kagex.updateCtags.title": "Update Ctags Index File",
+  "kagex.showReferencePrompt.title": "Show reference search prompt",
   "kagex.configuration.title": "KAG/KAGEX Configuration",
   "kagex.ctagsProcess.description": "Ctags Configuration",
   "kagex.items.tagFilePath.description": "Path to the Ctags' index file",
@@ -9,6 +10,8 @@
   "kagex.items.runOnSave.description": "Whether recreate the index file automatically when ks file is saved",
   "kagex.items.fileExtensions.description": "File extesions to be searched as ks file",
   "kagex.items.extraOption.description": "Command-line options which will be passed to ctags",
-  "kagex.ctagsRunOnSaveLanguages.description": "Languages to run ctag process whose runOnSave is true when these languages' file is saved"
-
+  "kagex.ctagsRunOnSaveLanguages.description": "Languages to run ctag process whose runOnSave is true when these languages' file is saved",
+  "kagex.referencePromptEnable.description": "Whether to show in the reference prompt",
+  "kagex.referencePromptEnable.kag3.description": "KAG3 Documents",
+  "kagex.referencePromptEnable.kagex.description": "KAGEX Documents"
 }

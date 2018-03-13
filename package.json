@@ -55,6 +55,18 @@
                 "command": "kagex.updateCtags",
                 "title": "%kagex.updateCtags.title%",
                 "category": "KAGEX"
+            },
+            {
+                "command": "kagex.showReferencePrompt",
+                "title": "%kagex.showReferencePrompt.title%",
+                "category": "KAGEX"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "kagex.showReferencePrompt",
+                "key": "ctrl+shift+alt+r",
+                "when": "editorLangId == kagex"
             }
         ],
         "configuration": {
@@ -124,6 +136,24 @@
                     "items": {
                         "type": "string"
                     }
+                },
+                "kagex.referencePromptEnable": {
+                    "description": "%kagex.referencePromptEnable.description%",
+                    "type": "object",
+                    "default": {
+                        "kag3": false,
+                        "kagex": true
+                    },
+                    "properties": {
+                        "kag3": {
+                            "description": "%kagex.referencePromptEnable.kag3.description%",
+                            "type": "boolean"
+                        },
+                        "kagex": {
+                            "description": "%kagex.referencePromptEnable.kagex.description%",
+                            "type": "boolean"
+                        }
+                    }
                 }
             }
         }
@@ -145,6 +175,7 @@
     "main": "./out/extension",
     "activationEvents": [
         "onLanguage:kagex",
-        "onCommand:kagex.updateCtags"
+        "onCommand:kagex.updateCtags",
+        "onCommand:kagex.showReferencePrompt"
     ]
 }
