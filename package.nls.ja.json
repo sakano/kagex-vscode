@@ -2,9 +2,13 @@
   "kagex.description":"Visual Studio CodeにKAG/KAGEXファイルの機能を追加します",
   "kagex.updateCtags.title": "Ctagsのインデックスファイルを更新",
   "kagex.configuration.title": "KAG/KAGEXの設定",
-  "kagex.ctagsFilePath.description": "Ctagsのインデックスファイルのファイル名",
-  "kagex.ctagsRootPath.description": "ksファイルを検索する際のルートパス",
-  "kagex.ctagsFileExtensions.description": "ksファイルとして扱うファイル拡張子",
-  "kagex.ctagsExtraOption.description": "Ctagsに渡す追加のコマンドラインオプション",
-  "kagex.ctagsRunOnSave.description": "ksファイルが保存されたときに自動的にインデックスファイルを再生成するか"
+  "kagex.ctagsProcess.description": "Ctagsの設定",
+  "kagex.items.tagFilePath.description": "Ctagsのインデックスファイルへのパス",
+  "kagex.items.searchPath.description": "ctagsがksファイルを検索するディレクトリへのパス",
+  "kagex.items.searchRecursive.description": "ksファイルを再帰的に検索するか",
+  "kagex.items.runOnSave.description": "ksファイルが保存されたときに自動的にインデックスファイルを再生成するか",
+  "kagex.items.fileExtensions.description": "ksファイルとして検索されるファイル拡張子",
+  "kagex.items.extraOption.description": "Ctagsに渡す追加のコマンドラインオプション",
+  "kagex.ctagsRunOnSaveLanguages.description": "ファイルが保存されたときrunOnSaveがtrueのctagsプロセスを実行する言語"
+
 }

@@ -61,35 +61,69 @@
             "type": "object",
             "title": "%kagex.configuration.title%",
             "properties": {
-                "kagex.ctagsFilePath": {
-                    "description": "%kagex.ctagsFilePath.description%",
-                    "type": "string",
-                    "default": ".tags"
-                },
-                "kagex.ctagsRootPath": {
-                    "description": "%kagex.ctagsRootPath.description%",
-                    "type": "string",
-                    "default": ""
-                },
-                "kagex.ctagsFileExtensions": {
-                    "description": "%kagex.ctagsFileExtensions.description%",
+                "kagex.ctagsProcess": {
+                    "description": "%kagex.ctagsProcess.description%",
                     "type": "array",
+                    "default": [
+                        {
+                            "tagFilePath": ".tags",
+                            "searchPath": "",
+                            "searchRecursive": true,
+                            "runOnSave": false,
+                            "fileExtensions": [
+                                ".ks"
+                            ],
+                            "extraOption": ""
+                        }
+                    ],
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "tagFilePath": {
+                                "description": "%kagex.items.tagFilePath.description%",
+                                "type": "string",
+                                "default": ".tags"
+                            },
+                            "searchPath": {
+                                "description": "%kagex.items.searchPath.description%",
+                                "type": "string",
+                                "default": ""
+                            },
+                            "searchRecursive": {
+                                "description": "%kagex.items.searchRecursive.description%",
+                                "type": "boolean"
+                            },
+                            "runOnSave": {
+                                "description": "%kagex.items.runOnSave.description%",
+                                "type": "boolean"
+                            },
+                            "fileExtensions": {
+                                "description": "%kagex.items.fileExtensions.description%",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "default": [
+                                    ".ks"
+                                ]
+                            },
+                            "extraOption": {
+                                "description": "%kagex.items.extraOption.description%",
+                                "type": "string",
+                                "default": ""
+                            }
+                        }
+                    }
+                },
+                "kagex.ctagsRunOnSaveLanguages": {
+                    "description": "%kagex.ctagsRunOnSaveLanguages.description%",
+                    "type": "array",
+                    "default": [
+                        "kagex"
+                    ],
                     "items": {
                         "type": "string"
-                    },
-                    "default": [
-                        ".ks"
-                    ]
-                },
-                "kagex.ctagsExtraOption": {
-                    "description": "%kagex.ctagsExtraOption.description%",
-                    "type": "string",
-                    "default": ""
-                },
-                "kagex.ctagsRunOnSave": {
-                    "description": "%kagex.ctagsRunOnSave.description%",
-                    "type": "boolean",
-                    "default": false
+                    }
                 }
             }
         }
