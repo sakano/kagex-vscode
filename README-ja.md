@@ -9,6 +9,24 @@ Visual Studio CodeにKAG/KAGEXファイル用の機能を追加します。
 - Ctagsをサポート。
 - emb, if, ignore, iscript, macroのスニペット。
 - 「;#region」と「;#endregion」で囲まれた部分の折りたたみ。
+- リファレンス検索パレットでAPIリファレンスを開けます。
+
+
+# リファレンス検索パレット
+次の手順でAPIリファレンスを開けます。
+1. Ctrl+Shift+Pを押してコマンドパレットを開きます。
+2. 「KAGEX: Open reference search palette」というコマンドを実行します。
+3. リファレンスを開きたいクラス名を入力します。
+デフォルトでは「Ctrl+Shift+Alt+R」がリファレンス検索パレットを開くキーボードショートカットです。
+
+## 設定
+次の設定で使用するリファレンスを変更できます。デフォルトではKAGEXリファレンスが使われます。
+```js
+  "kagex.referencePalletEnable": {
+    "kag3": false, // KAG3リファレンス
+    "kagex": true, // KAGEXリファレンス
+  }
+```
 
 
 # Ctagsサポートについて
@@ -23,24 +41,45 @@ Visual Studio CodeにKAG/KAGEXファイル用の機能を追加します。
 2. 「Ctrl+Shift+P」を押してコマンドパレットを開きます
 3. 「KAGEX: Update Ctags File」というコマンドを実行します。
 
-以上で、「.tags」というファイルが開いたディレクトリに作成されctagsx[ctagsx](https://marketplace.visualstudio.com/items?itemName=jtanx.ctagsx)の機能を使えるようになります。
+以上で、「.tags」というファイルが開いたディレクトリに作成され[ctagsx](https://marketplace.visualstudio.com/items?itemName=jtanx.ctagsx)の機能を使えるようになります。
 
 ## 設定
-### kagex.ctagsRunOnSave
-trueならksファイルが保存されたときにインデックスファイルを自動的に再生成するようになります。デフォルトではfalseです。
+次の設定でCtagsの動作を変更できます。
+```js
+  "kagex.ctagsProcess": [
+    {
+      "tagFilePath": ".tags", // Ctagsのインデックスファイルへのパス
+      "searchPath": "", // Ctagsがksファイルを検索するディレクトリへのパス
+      "searchRecursive": true, // ksファイルを再帰的に検索するか
+      "runOnSave": false, // ksファイルが保存されたときに自動的にインデックスファイルを再生成するか
+      "fileExtensions": [ // ksファイルとして検索されるファイル拡張子
+        ".ks"
+      ],
+      "extraOption": "" // Ctagsに渡す追加のコマンドラインオプション
+    }
+  ]
+```
+複数のインデックスファイルを生成するにはkagex.ctagsProcessに複数設定してください。
 
-### kagex.ctagsFilePath
-インデックスファイルの名前です。デフォルトでは".tags"です
-
-### kagex.ctagsRootpath
-ctagsがksファイルを検索するディレクトリへの、ワークスペースからの相対パスです。デフォルトの""ではワークスペースの全てのksファイルが検索されます。
-例えば、"src\\"と設定するとワークスペースのsrcディレクトリ以下のksファイルのみが検索されます。
-
-### kagex.ctagsFileExtensions
-ctagsのファイル検索時にksファイルとして認識される拡張子です。デフォルトでは拡張子が".ks"のファイルのみがksファイルとして扱われます。
-
-### kagex.ctagsExtraOption
-ctagsを実行するときに渡される追加のコマンドラインオプションです。
+次の設定はsrcディレクトリとoutディレクトリにインデックスファイルを生成する例です。
+```js
+  "kagex.ctagsProcess": [
+    // srcディレクトリ内のksファイルを検索してsrc/.tagsを生成する
+    {
+      "tagFilePath": "src/.tags",
+      "searchPath": "src/",
+      "searchRecursive": true,
+      "runOnSave": true,
+    },
+    // outディレクトリ内のksファイルを検索してout/.tagsを生成する
+    {
+      "tagFilePath": "out/.tags",
+      "searchPath": "out/",
+      "searchRecursive": true,
+      "runOnSave": true,
+    }
+  ]
+```
 
 
 # 連絡先

@@ -2,7 +2,7 @@
     "name": "kagex-vscode",
     "displayName": "KAG/KAGEX",
     "description": "%kagex.description%",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "Biscrat",
     "license": "MIT",
     "icon": "images/kagicon.png",
@@ -57,14 +57,14 @@
                 "category": "KAGEX"
             },
             {
-                "command": "kagex.showReferencePrompt",
-                "title": "%kagex.showReferencePrompt.title%",
+                "command": "kagex.openReferencePallet",
+                "title": "%kagex.openReferencePallet.title%",
                 "category": "KAGEX"
             }
         ],
         "keybindings": [
             {
-                "command": "kagex.showReferencePrompt",
+                "command": "kagex.openReferencePallet",
                 "key": "ctrl+shift+alt+r",
                 "when": "editorLangId == kagex"
             }
@@ -137,8 +137,8 @@
                         "type": "string"
                     }
                 },
-                "kagex.referencePromptEnable": {
-                    "description": "%kagex.referencePromptEnable.description%",
+                "kagex.referencePalletEnable": {
+                    "description": "%kagex.referencePalletEnable.description%",
                     "type": "object",
                     "default": {
                         "kag3": false,
@@ -146,11 +146,11 @@
                     },
                     "properties": {
                         "kag3": {
-                            "description": "%kagex.referencePromptEnable.kag3.description%",
+                            "description": "%kagex.referencePalletEnable.kag3.description%",
                             "type": "boolean"
                         },
                         "kagex": {
-                            "description": "%kagex.referencePromptEnable.kagex.description%",
+                            "description": "%kagex.referencePalletEnable.kagex.description%",
                             "type": "boolean"
                         }
                     }
@@ -176,6 +176,6 @@
     "activationEvents": [
         "onLanguage:kagex",
         "onCommand:kagex.updateCtags",
-        "onCommand:kagex.showReferencePrompt"
+        "onCommand:kagex.openReferencePallet"
     ]
 }

@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to the "kagex-vscode" extension will be documented in this file.
 
+## [1.1.0]
+- Add reference search pallet
+- Change configurations to run ctags multiple times once
+
+
 ## [1.0.0]
 - Support creation of ctags index file
 - Add Japanese translation

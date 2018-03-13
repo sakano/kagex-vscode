@@ -397,7 +397,7 @@ export class ReferenceProvider {
     }
 
     private loadConfiguration() {
-        const config = vscode.workspace.getConfiguration("kagex").referencePromptEnable;
+        const config = vscode.workspace.getConfiguration("kagex").referencePalletEnable;
         const check = (key: string, def: boolean): boolean => {
             if (def) {
                 return config === undefined || config[key] === undefined || config[key];
@@ -418,7 +418,7 @@ export class ReferenceProvider {
         return aStr > bStr ? 1 : aStr === bStr ? 0 : -1;
     }
 
-    public showPrompt() {
+    public openPallet() {
         const options: vscode.QuickPickOptions = {
             "placeHolder": "Which reference will you open?",
             "matchOnDescription": true

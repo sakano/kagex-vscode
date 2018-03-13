@@ -1,17 +1,17 @@
 {
   "kagex.description": "Visual Studio CodeにKAG/KAGEXファイルの機能を追加します",
   "kagex.updateCtags.title": "Ctagsのインデックスファイルを更新",
-  "kagex.showReferencePrompt.title": "リファレンス検索プロンプトを表示",
+  "kagex.openReferencePallet.title": "リファレンス検索プロンプトを開く",
   "kagex.configuration.title": "KAG/KAGEXの設定",
   "kagex.ctagsProcess.description": "Ctagsの設定",
   "kagex.items.tagFilePath.description": "Ctagsのインデックスファイルへのパス",
-  "kagex.items.searchPath.description": "ctagsがksファイルを検索するディレクトリへのパス",
+  "kagex.items.searchPath.description": "Ctagsがksファイルを検索するディレクトリへのパス",
   "kagex.items.searchRecursive.description": "ksファイルを再帰的に検索するか",
   "kagex.items.runOnSave.description": "ksファイルが保存されたときに自動的にインデックスファイルを再生成するか",
   "kagex.items.fileExtensions.description": "ksファイルとして検索されるファイル拡張子",
   "kagex.items.extraOption.description": "Ctagsに渡す追加のコマンドラインオプション",
   "kagex.ctagsRunOnSaveLanguages.description": "ファイルが保存されたときrunOnSaveがtrueのctagsプロセスを実行する言語",
-  "kagex.referencePromptEnable.description": "リファレンスプロンプトに表示するか",
-  "kagex.referencePromptEnable.kag3.description": "KAG3ドキュメント",
-  "kagex.referencePromptEnable.kagex.description": "KAGEXドキュメント"
+  "kagex.referencePalletEnable.description": "リファレンスプロンプトに表示するか",
+  "kagex.referencePalletEnable.kag3.description": "KAG3ドキュメント",
+  "kagex.referencePalletEnable.kagex.description": "KAGEXドキュメント"
 }
