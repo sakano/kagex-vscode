@@ -15,7 +15,7 @@ I recommend installing [tjs-vscode](https://marketplace.visualstudio.com/items?i
 - The Reference search pallet to open API references
 
 
-# Refrence search palette
+# Reference search palette
 You can open API references with your browser by following the steps
 1. Push Ctrl+Shift+P to open the Command Pallet.
 3. Execute the command "KAGEX: Open reference search palette".
