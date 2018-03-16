@@ -1,12 +1,12 @@
 'use strict';
 import * as vscode from 'vscode';
 
-interface QuickPickItemWithURL extends vscode.QuickPickItem {
+interface Reference extends vscode.QuickPickItem {
     url: string;
 }
 
 export class ReferenceProvider {
-    private readonly kag3ReferenceMap: QuickPickItemWithURL[] = [
+    private readonly kag3ReferenceMap: Reference[] = [
         { label: "animstart", description: "アニメーションの開始(KAG3)", url: "https://krkrz.github.io/krkr2doc/kag3doc/contents/Tags.html#animstart" },
         { label: "animstop", description: "アニメーションの停止(KAG3)", url: "https://krkrz.github.io/krkr2doc/kag3doc/contents/Tags.html#animstop" },
         { label: "autowc", description: "自動ウェイト(KAG3)", url: "https://krkrz.github.io/krkr2doc/kag3doc/contents/Tags.html#autowc" },
@@ -167,7 +167,7 @@ export class ReferenceProvider {
         { label: "wv", description: "ビデオ再生の終了待ち(KAG3)", url: "https://krkrz.github.io/krkr2doc/kag3doc/contents/Tags.html#wv" },
         { label: "xchgbgm", description: "BGM を入れ替える(KAG3)", url: "https://krkrz.github.io/krkr2doc/kag3doc/contents/Tags.html#xchgbgm" },
     ];
-    private readonly kagexReferenceMap: QuickPickItemWithURL[] = [
+    private readonly kagexReferenceMap: Reference[] = [
         { label: "action", description: "アクションの開始(KAGEX)", url: "https://biscrat.com/krkr/docs/kagex/contents/Tags.html#action" },
         { label: "animstart", description: "アニメーションの開始(KAGEX)", url: "https://biscrat.com/krkr/docs/kagex/contents/Tags.html#animstart" },
         { label: "animstop", description: "アニメーションの停止(KAGEX)", url: "https://biscrat.com/krkr/docs/kagex/contents/Tags.html#animstop" },
@@ -390,7 +390,7 @@ export class ReferenceProvider {
         { label: "xchgbgm", description: "BGM を入れ替える(KAGEX)", url: "https://biscrat.com/krkr/docs/kagex/contents/Tags.html#xchgbgm" },
     ];
 
-    private readonly pickItems: QuickPickItemWithURL[] = [];
+    private readonly pickItems: Reference[] = [];
 
     public constructor() {
         this.loadConfiguration();
@@ -424,7 +424,7 @@ export class ReferenceProvider {
             "matchOnDescription": true
         };
 
-        vscode.window.showQuickPick<QuickPickItemWithURL>(this.pickItems, options).then(item => {
+        vscode.window.showQuickPick<Reference>(this.pickItems, options).then(item => {
             if (item === undefined) { return; }
             vscode.commands.executeCommand('vscode.open', vscode.Uri.parse(item.url));
         });
