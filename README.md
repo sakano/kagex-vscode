@@ -23,7 +23,7 @@ You can open API references with your browser by following the steps
 "Ctrl+Shift+Alt+R" is default shortcut key to open reference search palette.
 
 ## Configuration
-You can choose references to search by following configuration. By default, KAGEX reference reference is enabled.
+You can choose references to search by following configuration. By default, KAGEX reference is enabled.
 ```js
   "kagex.referencePalletEnable": {
     "kag3": false, // KAG3 reference
@@ -54,7 +54,7 @@ You can change ctags behavior by the following configuration.
       "searchPath": "", // Path to the directory where ctags search ks files
       "searchRecursive": true, // Whether search ks files recursively
       "runOnSave": false, // Whether recreate the index file automatically when ks file is saved
-      "fileExtensions": [ // File extesions to be searched as ks file
+      "fileExtensions": [ // File extensions to be searched as ks file
         ".ks"
       ],
       "extraOption": "" // Command-line options which will be passed to ctags

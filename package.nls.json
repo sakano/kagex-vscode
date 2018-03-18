@@ -8,9 +8,9 @@
   "kagex.items.searchPath.description": "Path to the directory where ctags search ks files",
   "kagex.items.searchRecursive.description": "Whether search ks files recursively",
   "kagex.items.runOnSave.description": "Whether recreate the index file automatically when ks file is saved",
-  "kagex.items.fileExtensions.description": "File extesions to be searched as ks file",
+  "kagex.items.fileExtensions.description": "File extensions to be searched as ks file",
   "kagex.items.extraOption.description": "Command-line options which will be passed to ctags",
-  "kagex.ctagsRunOnSaveLanguages.description": "Languages to run ctag process whose runOnSave is true when these languages' file is saved",
+  "kagex.ctagsRunOnSaveLanguages.description": "Languages to run ctags process whose runOnSave is true when these languages' file is saved",
   "kagex.referencePalletEnable.description": "Whether to show in the reference pallet",
   "kagex.referencePalletEnable.kag3.description": "KAG3 Documents",
   "kagex.referencePalletEnable.kagex.description": "KAGEX Documents"
