@@ -100,7 +100,7 @@ export class CTagsSupportProvider {
                 " \"--regex-kagex=/\\[[ap]?macro[ \\t]+name[ \\t]*=[ \\t]*'(.+?)'/\\1/m,macro/\"" +
                 ` ${p.extraOption} -f \"${rootPath}\\${p.tagFilePath}\" ${p.searchRecursive ? "-R" : ""} \"${rootPath}\\${p.searchPath}*\"`;
             exec(cmd,
-                (err: any, stdout: any, stderr: any) => {
+                (err: any, _stdout: any, _stderr: any) => {
                     if (err !== null) {
                         vscode.window.showErrorMessage("ctags:" + err);
                     }
